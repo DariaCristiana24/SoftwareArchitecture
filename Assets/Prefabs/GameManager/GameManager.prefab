@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &150972460846541451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8305439141801738561}
+  - component: {fileID: 8541743358979422652}
+  - component: {fileID: 6297522091001394333}
+  - component: {fileID: 8902677331682736073}
+  - component: {fileID: 2130356182839894106}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8305439141801738561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150972460846541451}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.45644414, y: 3.1239762, z: -6.2943344}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8541743358979422652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150972460846541451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05da601e64b0aa0448281638276e143f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyFeedback: {fileID: 812344620916770041, guid: 83c7eb73fe02a0f46a722af7e2ce4511, type: 3}
+--- !u!114 &6297522091001394333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150972460846541451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0527c8c5bfa73d643b4e787cfe689726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLocation: {fileID: 0}
+  enemies: []
+--- !u!114 &8902677331682736073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150972460846541451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b59f031aecd8b4d92d69775bf1a6a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingMoney: 100
+  buyingTime: 15
+  State: 0
+  timeScale: 1
+  FinishLocation: {fileID: 0}
+  FinishedSpawningBool: 0
+  uIManager: {fileID: 0}
+--- !u!114 &2130356182839894106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150972460846541451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341538fd2f0a75d4da663ac30a93019f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buyingPlanePrefab: {fileID: 2993794306993725835, guid: a4a7a238cfc4e6a46abba590634dbe0a, type: 3}
+  towers:
+  - {fileID: 11400000, guid: 3425dfc8df286844ebda57aabfe76ce7, type: 2}
+  - {fileID: 11400000, guid: f0dcbfecb739aee49b633e2b322405ad, type: 2}
+  - {fileID: 11400000, guid: 9862d5b00ce58cb4b93f6a14321bb794, type: 2}
+  upgrades:
+  - {fileID: 11400000, guid: fe0ff2157b55a55428e11dc5f1146fc1, type: 2}
+  - {fileID: 11400000, guid: fd9d0ba9bddb4544e8ef0d1d82bf2102, type: 2}
+  - {fileID: 11400000, guid: 95df032ebc9cf3e49ab77636fa96577c, type: 2}
+  SelectedTowerInUse: 0
+  maxRange: 15
+  maxDamage: 10
+  maxSpeed: 3
