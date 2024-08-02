@@ -60,7 +60,7 @@ public class UpgradeSlot : MonoBehaviour
     private IEnumerator checkIfMaxPower()
     {
         yield return new WaitForSeconds(0.01f);
-        isMaxPower = GameManager.Instance.GetTowerManager().CheckIfTowerUpgradeIsMax(UpgradeType);
+        isMaxPower = GameManager.Instance.GetTowerManager().CheckUpgradeMax(UpgradeType);
         if (isMaxPower)
         {
             image.color = Color.red;

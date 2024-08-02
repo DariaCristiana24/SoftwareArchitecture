@@ -5,7 +5,6 @@ using UnityEngine;
 //controls the projectiles
 public class ProjectileController : MonoBehaviour
 {
-    [SerializeField]
     private Vector3 velocity;
 
     private int damage=0; 

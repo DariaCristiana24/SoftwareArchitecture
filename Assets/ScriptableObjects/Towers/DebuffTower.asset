@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 2
   TowerName: Slow Debuff Tower
-  TowerImage: {fileID: 21300000, guid: 0f9ea93389c9a1742a5299f0870d670e, type: 3}
-  Price: 15
+  TowerImage: {fileID: 21300000, guid: a83b24f5de9e3a04395fc6c4e59ad8b6, type: 3}
+  Price: 30
   TowerPrefab: {fileID: 5677658172595701893, guid: fbcba6b834ed0404dbe1278c0f029294, type: 3}

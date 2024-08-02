@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75c4ee3fee78b2546a8dd2e5cd8de2cd, type: 3}
   m_Name: Wave 2
   m_EditorClassIdentifier: 
-  WaveID: 0
+  WaveID: 2
   WaveDescription: 
   EnemyPrefabs:
   - {fileID: 5459436978595147005, guid: 9e27ee68c6d54d64fb15053550bc5a28, type: 3}
   - {fileID: 5459436978595147005, guid: 8377973242000524fb1594b10893b197, type: 3}
-  EnemiesAmount: 0000000003000000
-  TimeBetweenSpawns: 1
+  EnemiesAmount: 0300000001000000
+  TimeBetweenSpawns: 2

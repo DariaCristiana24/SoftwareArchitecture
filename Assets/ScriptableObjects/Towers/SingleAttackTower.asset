@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 1
   TowerName: Single Attack Tower
-  TowerImage: {fileID: 21300000, guid: 0f9ea93389c9a1742a5299f0870d670e, type: 3}
+  TowerImage: {fileID: 21300000, guid: 3d1531c39fdc71f4782ea7914fe808c7, type: 3}
   Price: 10
   TowerPrefab: {fileID: 5254463772173931480, guid: 5b2e5eaffec8166448af6a3179cdcb7f, type: 3}

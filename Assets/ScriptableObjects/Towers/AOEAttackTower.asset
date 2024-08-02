@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 3
   TowerName: AOE Attack Tower
-  TowerImage: {fileID: 21300000, guid: 0f9ea93389c9a1742a5299f0870d670e, type: 3}
-  Price: 20
+  TowerImage: {fileID: 21300000, guid: 5b0bc0a362f6d894195f54fe7b21ef1d, type: 3}
+  Price: 100
   TowerPrefab: {fileID: 8899303221763691255, guid: 6a1c511f357085940abe7a3f4f4df968, type: 3}

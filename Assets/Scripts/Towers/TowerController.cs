@@ -33,8 +33,17 @@ public class TowerController : MonoBehaviour
 
     void Start()
     {
-        ren = GetComponent<Renderer>();
+        ren = towerModel.GetComponentInChildren<Renderer>();
         areaOfEffect = GetComponentInChildren<AreaOfEffect>();
+
+        if(ren == null)
+        {
+            Debug.Log("Renderer on tower missing...");
+        }
+        if (areaOfEffect == null)
+        {
+            Debug.Log("AreOfEffect on tower missing...");
+        }
 
         defaultColor = ren.material.color;
 
@@ -75,7 +84,7 @@ public class TowerController : MonoBehaviour
     {
         if (!GameManager.Instance.GetTowerManager().SelectedTowerInUse && GameManager.Instance.State == GameManager.GameState.Buying)
         {
-            ren.material.color = Color.white;
+            ren.material.color = Color.green;
         }
     }
 
@@ -109,10 +118,10 @@ public class TowerController : MonoBehaviour
         attackInterval = 1/attackSpeed;
 
         //checks if max speed was reached to give visual feedback
-        if (GameManager.Instance.GetTowerManager().CheckIfTowerUpgradeIsMax(Upgrade.UpgradeTypeEnum.Speed))
+        if (GameManager.Instance.GetTowerManager().CheckUpgradeMax(Upgrade.UpgradeTypeEnum.Speed))
         {
             speedMaxed = true;
-            CheckIfMaxedOut();
+            CheckMaxedOut();
         }
     }
     public void UpgradeDamage(int pPower)
@@ -120,34 +129,34 @@ public class TowerController : MonoBehaviour
         damage += pPower;
 
         //checks if max damage was reached to give visual feedback
-        if (GameManager.Instance.GetTowerManager().CheckIfTowerUpgradeIsMax(Upgrade.UpgradeTypeEnum.Damage))
+        if (GameManager.Instance.GetTowerManager().CheckUpgradeMax(Upgrade.UpgradeTypeEnum.Damage))
         {
             damageMaxed = true;
-            CheckIfMaxedOut();
+            CheckMaxedOut();
         }
     }
 
     //checks if a tower has damage and speed maxed out in order to give visual feedback
-    private void CheckIfMaxedOut()
+    private void CheckMaxedOut()
     {
         if(damageMaxed && speedMaxed)
         {
-            towerModel.transform.localScale *= 2;
+            towerModel.transform.localScale *= 1.5f;
         }
     }
 
-    public bool CheckIfTooBigRange(int maxRange)
+    public bool CheckRangeMax(int maxRange)
     {
         if(areaOfEffectSize >=  maxRange) { return true; }
         return false;
     }
 
-    public bool CheckIfTooHighDamage(int maxDamage)
+    public bool CheckDamageMax(int maxDamage)
     {
         if (damage >= maxDamage ) { return true; }
         return false;
     }
-    public bool CheckIfTooHighSpeed(int maxSpeed)
+    public bool CheckSpeedMax(int maxSpeed)
     {
         if (attackSpeed >= maxSpeed) { return true; }
         return false;

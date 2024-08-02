@@ -25,7 +25,6 @@ public class AreaOfEffect : MonoBehaviour
             if (enemyList[0] == null)
             {
                 enemyList.RemoveAt(0);
-                Debug.Log("it does happen");
             }
         }
     }

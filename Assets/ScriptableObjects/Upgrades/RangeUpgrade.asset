@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: RangeUpgrade
   m_EditorClassIdentifier: 
   UpgradeName: Range
-  Price: 5
+  Price: 20
   UpgradePower: 5
   UpgradeType: 0

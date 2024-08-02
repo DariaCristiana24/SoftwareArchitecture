@@ -25,13 +25,13 @@ public class EnemyManager : MonoBehaviour
     }
 
     //An enemy died
-    public void EnemyDeath(EnemyDeathEvent enemyDeathEvent) 
+    private void EnemyDeath(EnemyDeathEvent enemyDeathEvent) 
     {
         enemies.Remove(enemyDeathEvent.enemy);
     }
 
     //Add an enemy to the list
-    public void addEnemy(AddEnemyToEnemyListEvent addEnemyToEnemyListEvent)
+    private void addEnemy(AddEnemyToEnemyListEvent addEnemyToEnemyListEvent)
     {
         enemies.Add(addEnemyToEnemyListEvent.enemy);
     }

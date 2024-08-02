@@ -21,7 +21,6 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        //Improvement
         //Checks if enemy prefabs and their amount is the same 
         foreach (Wave wave in waves)
         {
@@ -51,7 +50,7 @@ public class Spawner : MonoBehaviour
     }
 
     //Starts the next wave
-    public void StartNextWave(StartNextWaveEvent startNextWaveEvent) 
+    private void StartNextWave(StartNextWaveEvent startNextWaveEvent) 
     {
         if (waves.Count > currentWave)
         {

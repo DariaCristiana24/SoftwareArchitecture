@@ -45,7 +45,7 @@ public class TowerManager : MonoBehaviour
         EventBus<BuyTowerEvent>.OnEvent -= BuyTower;
     }
 
-    public void BuyTower(BuyTowerEvent buyTowerEvent)
+    private void BuyTower(BuyTowerEvent buyTowerEvent)
     {
         //buy a new tower if a slot is selected
         if (selectedTowerBuilder != null)
@@ -60,7 +60,7 @@ public class TowerManager : MonoBehaviour
     }
 
     // selects a tower slot for buying a tower
-    public void SelectTowerBuilder(SelectTowerBuilderEvent selectTowerEvent)
+    private void SelectTowerBuilder(SelectTowerBuilderEvent selectTowerEvent)
     {
         selectedTowerBuilder = selectTowerEvent.towerBuilder;
         SelectedTowerInUse = true;
@@ -76,7 +76,7 @@ public class TowerManager : MonoBehaviour
     }
 
     //Upgrades a tower
-    public void UpgradeTower(UpgradeTowerEvent upgradeTowerEvent)
+    private void UpgradeTower(UpgradeTowerEvent upgradeTowerEvent)
     {
         if (selectedTowerController)
         {
@@ -98,7 +98,7 @@ public class TowerManager : MonoBehaviour
     }
 
     //selects a tower controller
-    public void SelectTowerController(SelectTowerControllerEvent selectTowerControllerEvent)
+    private void SelectTowerController(SelectTowerControllerEvent selectTowerControllerEvent)
     {
         selectedTowerController = selectTowerControllerEvent.towerController;
         SelectedTowerInUse = true;
@@ -124,18 +124,18 @@ public class TowerManager : MonoBehaviour
     }
 
     //checks if the upgrade is possible based on the limit for each upgrade
-    public bool CheckIfTowerUpgradeIsMax(Upgrade.UpgradeTypeEnum type)
+    public bool CheckUpgradeMax(Upgrade.UpgradeTypeEnum type)
     {
         if (selectedTowerController)
         {
             switch (type)
             {
                 case Upgrade.UpgradeTypeEnum.Range:
-                    return selectedTowerController.CheckIfTooBigRange(maxRange);
+                    return selectedTowerController.CheckRangeMax(maxRange);
                 case Upgrade.UpgradeTypeEnum.Damage:
-                    return selectedTowerController.CheckIfTooHighDamage(maxDamage);
+                    return selectedTowerController.CheckDamageMax(maxDamage);
                 case Upgrade.UpgradeTypeEnum.Speed:
-                    return selectedTowerController.CheckIfTooHighSpeed(maxSpeed);
+                    return selectedTowerController.CheckSpeedMax(maxSpeed);
 
             }
         }

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: DamageUpgrade
   m_EditorClassIdentifier: 
   UpgradeName: Damage
-  Price: 5
+  Price: 15
   UpgradePower: 1
   UpgradeType: 1
